@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     coreApp="true"
-    package="com.beauty.dialer">
+    package="com.base.dialer">
 
     <application
-        android:name=".BeautyApplication"
+        android:name=".DialerApp"
         android:allowBackup="false"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,44 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity
-            android:name="com.beauty.settings.BeautySettingsActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.DIAL" />
-                <data android:scheme="tel" />
-            </intent-filter>
-            <!-- provides dial UI -->
-            <intent-filter>
-                <action android:name="android.intent.action.DIAL" />
-            </intent-filter>
-        </activity>
-
         <!-- 虚拟来电功能 -->
-        <service
-            android:name="com.beauty.connection.service.MockConnectionService"
-            >
-        </service>
 
         <!-- default dialer中的来电拦截功能 -->
-        <service android:name="com.beauty.incall.BeautyCallScreeingService" />
 
         <!-- 通话InCallService, 修改default dialer需要-->
-        <service
-            android:name="com.beauty.incall.BeautyInCallServiceImpl"
-            android:permission="android.permission.BIND_INCALL_SERVICE">
-            <intent-filter>
-                <action android:name="android.telecom.InCallService" />
-            </intent-filter>
-            <meta-data
-                android:name="android.telecom.IN_CALL_SERVICE_UI"
-                android:value="true" />
-        </service>
     </application>
 
     <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />

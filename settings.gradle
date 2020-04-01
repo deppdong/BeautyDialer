@@ -1,2 +1,7 @@
 include ':app'
 rootProject.name='BeautyDialer'
+include ':incall'
+include ':contacts'
+include ':network'
+include ':common'
+include ':settings'
