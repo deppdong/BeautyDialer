@@ -1,0 +1,14 @@
+<resources>
+    <string name="title_activity_d_main_setting">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="default_settings">默认设置</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="default_dialer">Default dialer</string>
+</resources>
