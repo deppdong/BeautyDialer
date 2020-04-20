@@ -1,13 +1,9 @@
 package com.base.common;
 
-import android.Manifest;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.telecom.TelecomManager;
-
-import androidx.core.app.ActivityCompat;
 
 public class TelecomHelper {
     private static TelecomHelper sInstance = new TelecomHelper();

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class CallList {
 
-    private ArrayList<BeautyCall> mCalls = new ArrayList<>();
+    private ArrayList<BCall> mCalls = new ArrayList<>();
 
     public void onIncomingCall() {
 

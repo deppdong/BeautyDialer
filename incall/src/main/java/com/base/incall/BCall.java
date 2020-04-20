@@ -1,10 +1,10 @@
 package com.base.incall;
 
-public class BeautyCall {
+public class BCall {
 
     android.telecom.Call mTelecomCall;
 
-    public BeautyCall(android.telecom.Call telecomCall) {
+    public BCall(android.telecom.Call telecomCall) {
         mTelecomCall = telecomCall;
     }
 }

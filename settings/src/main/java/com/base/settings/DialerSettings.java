@@ -8,6 +8,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
 
+import com.base.common.DefaultDialerHelper;
 import com.base.common.TelecomHelper;
 
 public class DialerSettings extends AppCompatActivity {
@@ -43,7 +44,9 @@ public class DialerSettings extends AppCompatActivity {
             if (mDefDialerPref == preference) {
                 boolean on = (boolean)newValue;
                 if(on) {
+                    DefaultDialerHelper.requestSelfAsDefDialer(getActivity());
                 } else {
+                    DefaultDialerHelper.resetSystemDialerAsDefault(getActivity());
                 }
                 mDefDialerPref.setSummary(TelecomHelper.getInstance().getDefaultDialer());
                 return on;

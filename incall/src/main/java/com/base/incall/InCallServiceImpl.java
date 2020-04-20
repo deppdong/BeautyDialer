@@ -10,7 +10,7 @@ import com.base.incall.audio.CallAudioManager;
 /**
  * 接收Telecom电话状态变化
  */
-public class BeautyInCallServiceImpl extends InCallService {
+public class InCallServiceImpl extends InCallService {
 
     @Override
     public void onCallAudioStateChanged(CallAudioState audioState) {
