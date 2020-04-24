@@ -14,9 +14,9 @@
             <option value="$PROJECT_DIR$/contacts" />
             <option value="$PROJECT_DIR$/dialer" />
             <option value="$PROJECT_DIR$/incall" />
+            <option value="$PROJECT_DIR$/message" />
             <option value="$PROJECT_DIR$/network" />
-            <option value="$PROJECT_DIR$/phonecommon" />
-            <option value="$PROJECT_DIR$/settings" />
+            <option value="$PROJECT_DIR$/yellowpage" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

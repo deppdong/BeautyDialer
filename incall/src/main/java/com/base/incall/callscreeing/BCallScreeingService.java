@@ -32,6 +32,7 @@ public class BCallScreeingService extends CallScreeningService {
 
     @Override
     public void onScreenCall(@NonNull Call.Details callDetails) {
+        // 当添加新的呼入或呼出电话但不在用户的联系人列表中时调用。
         callDetails.getAccountHandle();
         callDetails.getHandle();
         // 如果視頻彩鈴，則

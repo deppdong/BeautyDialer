@@ -18,7 +18,8 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        // easypermission申请权限 https://github.com/githubZYQ/easypermission
+        maven { url 'https://jitpack.io' }
     }
 }
 

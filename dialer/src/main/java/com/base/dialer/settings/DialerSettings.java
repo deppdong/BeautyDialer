@@ -1,4 +1,4 @@
-package com.base.settings;
+package com.base.dialer.settings;
 
 import android.os.Bundle;
 
@@ -16,10 +16,10 @@ public class DialerSettings extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings_activity);
+        setContentView(com.base.settings.R.layout.settings_activity);
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.settings, new SettingsFragment())
+                .replace(com.base.settings.R.id.settings, new SettingsFragment())
                 .commit();
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -33,7 +33,7 @@ public class DialerSettings extends AppCompatActivity {
         private SwitchPreferenceCompat mDefDialerPref;
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            setPreferencesFromResource(R.xml.root_preferences, rootKey);
+            setPreferencesFromResource(com.base.settings.R.xml.settings_preferences, rootKey);
             mDefDialerPref = findPreference("default_dialer");
             mDefDialerPref.setOnPreferenceChangeListener(this);
             mDefDialerPref.setSummary(TelecomHelper.getInstance().getDefaultDialer());

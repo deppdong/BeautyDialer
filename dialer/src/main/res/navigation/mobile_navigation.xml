@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_calllog">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.base.dialer.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:id="@+id/navigation_calllog"
+        android:name="com.base.dialer.ui.dialpad.DialpadFragment"
+        android:label="@string/title_calllog"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.base.dialer.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:id="@+id/navigation_message"
+        android:name="com.base.dialer.ui.calllog.CallLogFragment"
+        android:label="@string/title_message"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_contacts"
         android:name="com.base.dialer.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/title_contacts"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

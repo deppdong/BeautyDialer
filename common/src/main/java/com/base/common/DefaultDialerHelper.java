@@ -41,4 +41,30 @@ public class DefaultDialerHelper {
         }
     }
 
+    /**
+     * CallScreeningService是
+     * @param activity
+     * @param requestCode
+     */
+    public void requestDefaultCallScreening(Activity activity, int requestCode) {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
+            RoleManager roleManager = (RoleManager) activity.getSystemService(Context.ROLE_SERVICE);
+            Intent intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_CALL_SCREENING);
+            activity.startActivityForResult(intent, requestCode);
+        }
+        /**
+         *     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+         *         if (requestCode == REQUEST_ID) {
+         *             if (resultCode == android.app.Activity.RESULT_OK) {
+         *                 // Your app is now the call screening app
+         *             } else {
+         *                 // Your app is not the call screening app
+         *             }
+         *         }
+         *     }
+         */
+    }
+
+
+
 }
