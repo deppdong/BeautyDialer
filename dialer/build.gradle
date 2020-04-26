@@ -37,8 +37,13 @@ dependencies {
     implementation project(path: ':contacts')
     implementation project(path: ':network')
     implementation project(path: ':message')
+    implementation project(path: ':yellowpage')
     implementation project(path: ':common')
 
     // easypermission申请权限 https://github.com/githubZYQ/easypermission
     implementation 'com.github.githubZYQ:easypermission:v1.0.0'
+
+    // butterknife 注解 https://www.jianshu.com/p/ac6ee4760385
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }

@@ -16,15 +16,15 @@ import com.base.dialer.R;
 
 public class DialpadFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private DialpadViewModel dialpadViewMode;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        dialpadViewMode =
+                ViewModelProviders.of(this).get(DialpadViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_dialpad, container, false);
         final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        dialpadViewMode.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
